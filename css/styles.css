@@ -1,0 +1,239 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.header{
+	background-image: linear-gradient(#7053037a, rgba(54, 31, 4, 0.692));
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	height: 50px;
+}
+.header a {
+	text-decoration: none;
+	color: rgb(2, 2, 2);
+	font-size: 25px;
+	flex: 0;
+	margin: 0px 15px;
+}
+.img-header{
+	background-image: url(../images/fractal.jpg);
+	width: 100%;
+	opacity: 84%;
+	min-height: 200%;
+}
+.title{
+	text-align: center;
+	color: rgb(235, 235, 235);
+	line-height: 50px;
+	padding: 80px;
+	text-shadow: 2px 2px #0000007a;
+}
+.img-header input{
+	padding: 15px;
+	font-size: 18px;
+	background-color: transparent;
+	border: rgb(238, 100, 8) solid 3px;
+	color: rgb(235, 235, 235);
+	cursor: pointer;
+	margin: 4px 45% 30px;
+	box-shadow: 0 8px 16px 0 black;
+}
+.container{
+	width: 100%;
+}
+.left{
+	padding: 5px;
+	width: 18%;
+	float: left;
+	background-color:  rgba(179, 143, 97, 0.233);
+}
+.body{
+	padding: 20px;
+	width: 64%;
+	float: left;
+}
+.right{
+	padding: 5px;
+	width: 18%;
+	float: left;
+	background-color: rgba(179, 143, 97, 0.233);
+}
+.footer{
+	padding: 15px 0px 20px 0px;
+	clear: both;
+	background-image: linear-gradient(#7053037a, rgba(54, 31, 4, 0.692));
+	color: black;
+	text-align: center;
+}
+
+.screen{
+	width: 100%;
+	height: 100%;
+}
+.biggerbox{
+	width: 50%;
+	height: 50%;
+	background-color: black;
+	margin: 0 auto;
+	display: flex;
+	/*flex-direction: column-reverse;*/
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.boxes{
+	width: 30%;
+	height: 30%;
+	background-color: cadetblue;
+	margin: 4px;
+	order: 2;
+	flex: 2 2 auto;
+}
+
+.screensecond{
+	margin: 10%;
+}
+.secondbox > div{
+	padding: 10px;
+	text-align: center;
+	font-size: 2em;
+	color: rgb(255, 180, 220);
+}
+.secondbox > div:nth-child(odd){
+	background-color: forestgreen;
+}
+.secondbox > div:nth-child(even){
+	background-color: rgb(51, 82, 1);
+}
+.secondbox {
+	border: 5px solid black;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+
+	/*justify-content: flex-end;
+
+.home{
+	margin-right: auto;
+
+}*/
+.secondbox > .home {
+	flex: 1 1 100px;	
+}
+.secondbox > .logout {
+	flex: 1 1 100px;
+}
+.home{
+	order: 2;
+}
+.search {
+	order: 0;
+}
+
+.scre{
+	height: 20%;
+	width: 100%;
+}
+.thirdone{
+	border: 2px solid red;
+	background-image: linear-gradient(rgba(212, 0, 255, 0.411), rgba(0, 0, 255, 0.336));
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row-reverse;
+	height: 60px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.one{
+	flex: 1 3 150px;
+	background-color: yellow;
+}
+.two{
+	flex: 1 2 150px;
+	background-color: chartreuse;
+}
+.three:nth-child(3){
+	flex: 2 2 150px;
+	background-color: cyan;
+}
+.forth:nth-child(4){
+	flex: 1 1 150px;
+	background-color: darkorange;
+}
+@media screen and (max-width: 600px){
+	.thirdone{
+		border-radius: 10px;
+	}
+	.secondbox > div{
+		color: aqua;
+	}
+}
+@media screen and (max-width: 500px){
+	.biggerbox{
+		width: 60%;
+		height: 50%;
+	}
+	.search, .logout, .profile, .home {
+		flex: 1 1 200px;		
+	}
+}
+
+.space{
+	height: 75%;
+	width: 100%;
+}
+.cont{
+	display: grid;
+	grid-template-columns: [main-start] 1fr [content-start] 4fr [content-end main-end];
+	grid-template-rows: [main-start]60px [content-start]5fr 60px 100px ;
+	grid-gap: 1px;
+}
+.a{
+	background-color: blue;
+	grid-column: main;
+}
+.b{
+	background-color: chartreuse;
+	grid-row: content;
+}
+.c{
+	background-color: crimson;
+	grid-column: content-start;
+	grid-row: content;
+}
+.d{
+	background-color: darkgoldenrod;
+	grid-column: 1 /13 ;
+}
+.e{
+	background-color: darkolivegreen;
+}
+.f{
+	background-color: darkslateblue;
+	grid-column: 1 / -1;
+}
+
+.imagescontainer{
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+	grid-auto-rows: 75px;
+	grid-auto-flow: dense;
+}
+.horizontal{
+	grid-column: span 2;
+}
+.vertical{
+	grid-row: span 2;
+
+}
+.big{
+	grid-column: span 2;
+	grid-row: span 2;
+
+}
